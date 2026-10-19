@@ -47,13 +47,13 @@ public class Main {
         // run-time polymorphism (method overriding)
 
         Vehicle vehicle = new Vehicle();
-        vehicle.description();
+//        vehicle.description();
 
         Car car = new Car();
-        car.description();
+//        car.description();
 
         Vehicle vehicle2 = new Car();
-        vehicle2.description();
+//        vehicle2.description();
 
 
 
@@ -61,6 +61,15 @@ public class Main {
     // Abstraction : abstrations is the process of hiding the implementation details and showing only the functionality to the user.
         // In Java, abstraction is achieved using abstract classes and interfaces.
         // It allows us to focus on what an object does instead of how it does it.
+
+        Payment payment1 = new NetBanking();
+        payment1.pay();
+
+        Payment payment2 = new Upi();
+        payment2.pay();
+
+        Payment payment3 = new CreditCard();
+        payment3.pay();
 
     }
 }
