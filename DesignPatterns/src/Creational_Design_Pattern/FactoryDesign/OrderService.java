@@ -1,15 +1,17 @@
 package Creational_Design_Pattern.FactoryDesign;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class OrderService {
 
-    Notification notification;
 
-    public void sendNotification(String type) {
-        if(type.equals("SMS")) {
-            notification = new SMSNotification();
-        } else if(type.equals("EMAIL")) {
-            notification = new EmailNotification();
+    public void sendNotification() {
+        List<Notification> notification = NotificationFactory.createNotifications(new ArrayList<>(Arrays.asList("email", "sms", "push")));
+        for (Notification n : notification) {
+            n.send();
         }
-        notification.send();
     }
 }
