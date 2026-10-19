@@ -6,15 +6,27 @@ public class Main {
         employee.name = "Shubham";
         employee.setId(101);
         employee.department = "Engineering";
-        employee.attendMeeting();
         employee.work();
 
-        Employee employee2 = new Employee();
-        employee2.name = "Isha";
-        employee2.setId(-11);
-        employee2.department = "Marketing";
-        employee2.attendMeeting();
-        employee2.work();
+        FullTimeEmp fullTimeEmp = new FullTimeEmp();
+        fullTimeEmp.name = "Rahul";
+        fullTimeEmp.setId(102);
+        fullTimeEmp.department = "Marketing";
+        fullTimeEmp.monthlySalary = 50000.0;
+        fullTimeEmp.paidLeaves = 20;
+
+        fullTimeEmp.work();
+
+        ContractEmp contractEmp = new ContractEmp();
+        contractEmp.name = "Neena";
+        contractEmp.setId(103);
+        contractEmp.department = "HR";
+        contractEmp.dailyWage = 2000.0;
+        contractEmp.duration = 30;
+
+        contractEmp.work();
+
+
 
 
     }
