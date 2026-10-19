@@ -1,8 +1,5 @@
 package ISP;
 
-public interface Employee {
+public interface Employee extends Coder, Tester, Deployer {
 
-    void writecode();
-    void testcode();
-    void deploycode();
 }

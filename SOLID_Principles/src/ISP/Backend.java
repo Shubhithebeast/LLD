@@ -1,6 +1,6 @@
 package ISP;
 
-public class Backend implements Employee {
+public class Backend implements Coder, Tester {
     @Override
     public void writecode() {
         System.out.println("Backend Developer is writing code");
@@ -11,8 +11,4 @@ public class Backend implements Employee {
         System.out.println("Backend Developer is testing code");
     }
 
-    @Override
-    public void deploycode() {
-        throw new UnsupportedOperationException("Backend Developer cannot deploy code");
-    }
 }

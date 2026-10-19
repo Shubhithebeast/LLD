@@ -26,5 +26,7 @@ public class Main {
         // Interface Segregation Principle (ISP): Clients should not be forced to depend on interfaces they do not use.
         // In other words, an interface should have only the methods that are relevant to the implementing class.
 
+        // Dependency Inversion Principle (DIP): High-level modules should not depend on low-level modules.
+        // Both should depend on abstractions (e.g., interfaces).
     }
 }

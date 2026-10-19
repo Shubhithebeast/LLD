@@ -1,15 +1,6 @@
 package ISP;
 
-public class Devops implements Employee {
-    @Override
-    public void writecode() {
-        throw new UnsupportedOperationException("Devops cannot write code");
-    }
-
-    @Override
-    public void testcode() {
-        throw new UnsupportedOperationException("Devops cannot test code");
-    }
+public class Devops implements Deployer {
 
     @Override
     public void deploycode() {
