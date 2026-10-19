@@ -7,4 +7,10 @@ public class PaymentService {
     public void processRefund() {
         System.out.println("Processing Refund");
     }
+
+    public void processTransaction(Payment payment) {
+        System.out.println("Processing Transaction");
+        payment.pay();
+        payment.refund();
+    }
 }
