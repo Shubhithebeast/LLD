@@ -2,14 +2,14 @@ package Creational_Design_Pattern.FactoryDesign;
 
 public class OrderService {
 
-    EmailNotification emailNotification = new EmailNotification();
-    SMSNotification smsNotification = new SMSNotification();
+    Notification notification;
 
-    public void SendNotificationEmail(){
-        emailNotification.send();
-    }
-
-    public void SendNotificationSMS(){
-        smsNotification.send();
+    public void sendNotification(String type) {
+        if(type.equals("SMS")) {
+            notification = new SMSNotification();
+        } else if(type.equals("EMAIL")) {
+            notification = new EmailNotification();
+        }
+        notification.send();
     }
 }
