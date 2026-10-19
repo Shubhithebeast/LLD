@@ -37,14 +37,23 @@ public class Main {
         // compile-time polymorphism (method overloading)
 
         Printer printer = new Printer();
-        printer.print();
-        printer.print("Document1");
-        printer.print("Document2", 5);
-        printer.print(3);
-        printer.print(2.5);
-        printer.print(null);
+//        printer.print();
+//        printer.print("Document1");
+//        printer.print("Document2", 5);
+//        printer.print(3);
+//        printer.print(2.5);
+//        printer.print(null);
 
         // run-time polymorphism (method overriding)
+
+        Vehicle vehicle = new Vehicle();
+        vehicle.description();
+
+        Car car = new Car();
+        car.description();
+
+        Vehicle vehicle2 = new Car();
+        vehicle2.description();
 
 
 
