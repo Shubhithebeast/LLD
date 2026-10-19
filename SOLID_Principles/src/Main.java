@@ -14,8 +14,10 @@ public class Main {
         // Liskov Substitution Principle (LSP): Objects of a superclass should be replaceable with
         // objects of its subclasses without affecting the correctness of the program.
         PaymentService paymentService = new PaymentService();
+        NonRefundablePayments cryptoPayment = new Crypto();
+        paymentService.processTransaction(cryptoPayment);
 
-        List<Payment> payments = List.of(new CreditCard(), new UPI(), new Crypto());
+        List<Payment> payments = List.of(new CreditCard(), new UPI());
 
         for (Payment payment : payments) {
             paymentService.processTransaction(payment);

@@ -1,4 +1,3 @@
-public interface Payment {
-    void pay();
+public interface Payment extends NonRefundablePayments {
     void refund();
 }

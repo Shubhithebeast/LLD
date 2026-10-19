@@ -13,4 +13,9 @@ public class PaymentService {
         payment.pay();
         payment.refund();
     }
+
+    public void processTransaction(NonRefundablePayments payment) {
+        System.out.println("Processing Transaction");
+        payment.pay();
+    }
 }
