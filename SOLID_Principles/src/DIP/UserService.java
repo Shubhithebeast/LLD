@@ -2,14 +2,14 @@ package DIP;
 
 public class UserService {
 
-    private MySqlDB db1 = new MySqlDB();
-    private PgDB db2 = new PgDB();
+    private Database db;
 
-    public void saveUser(String user) {
-        db1.saveData(user);
+    public UserService(Database db) {
+        this.db = db;
     }
 
-    public void saveUserToPgDB(String user) {
-        db2.saveData(user);
+    public void saveData(String user) {
+        db.saveData(user);
     }
+
 }
