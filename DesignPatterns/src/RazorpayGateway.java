@@ -1,0 +1,6 @@
+/**
+ * RazorpayGateway
+ */
+public class RazorpayGateway {
+
+}

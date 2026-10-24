@@ -11,6 +11,10 @@ import Creational_Design_Pattern.BuilderDesign.UserMigrationService;
 import Creational_Design_Pattern.PrototypeDesign.GameBotCharacter;
 import Creational_Design_Pattern.SingeltonDesign.Calculator;
 import Structural_Design_Pattern.AdapterDesign.PaymentClient;
+import Structural_Design_Pattern.AdapterDesign.PaypalAdapter;
+import Structural_Design_Pattern.AdapterDesign.PaypalGateway;
+import Structural_Design_Pattern.AdapterDesign.RazorpayAdapter;
+import Structural_Design_Pattern.AdapterDesign.RazorpayGateway;
 import Creational_Design_Pattern.BuilderDesign.LoginService;
 
 public class Main {
@@ -105,8 +109,7 @@ public class Main {
 
         // Adapter pattern - It is a structural design pattern that allows two incompatible system or interfaces to work together.
 
-        PaymentClient paymentClient = new PaymentClient();
-        paymentClient.makePayment();
+        new PaymentClient(new RazorpayAdapter(new RazorpayGateway())).makePayment();
 
 
 
