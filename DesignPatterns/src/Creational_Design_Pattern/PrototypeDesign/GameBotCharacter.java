@@ -1,12 +1,15 @@
 package Creational_Design_Pattern.PrototypeDesign;
 
+import java.util.List;
+
 public class GameBotCharacter implements Clonable<GameBotCharacter>  {
 
     private String name;
     private int health;
     private int power;
+    private List<String> weapons;
 
-    public GameBotCharacter(String name, int health, int power) {
+    public GameBotCharacter(String name, int health, int power, List<String> weapons) {
 
         System.out.println("Loading characters animation from DB...");
         System.out.println("Loading sound effects from DB...");
@@ -21,12 +24,14 @@ public class GameBotCharacter implements Clonable<GameBotCharacter>  {
         this.name = name;
         this.health = health;
         this.power = power;
+        this.weapons = weapons;
     }
 
     private GameBotCharacter(GameBotCharacter prototype) {
         this.name = prototype.name;
         this.health = prototype.health;
         this.power = prototype.power;
+        this.weapons = prototype.weapons;
     }
 
     public void setName(String name) {
@@ -41,6 +46,10 @@ public class GameBotCharacter implements Clonable<GameBotCharacter>  {
         this.power = power;
     }
 
+    public List<String> getWeapons() {
+        return weapons;
+    }
+
     @Override
     public GameBotCharacter customizeClone() {
         return new GameBotCharacter(this);
@@ -52,6 +61,7 @@ public class GameBotCharacter implements Clonable<GameBotCharacter>  {
                 "name='" + name + '\'' +
                 ", health=" + health +
                 ", power=" + power +
+                ", weapons=" + weapons +
                 '}';
     }
 

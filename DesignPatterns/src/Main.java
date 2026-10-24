@@ -1,3 +1,9 @@
+import java.util.List;
+
+import Creational_Design_Pattern.AbstarctPattern.DeliveryService;
+import java.util.Arrays;
+import java.util.ArrayList;
+
 import Creational_Design_Pattern.AbstarctPattern.DeliveryService;
 import Creational_Design_Pattern.AbstarctPattern.OrderService;
 import Creational_Design_Pattern.BuilderDesign.EmailService;
@@ -63,16 +69,19 @@ public class Main {
 
         long startTime = System.currentTimeMillis();
 
-        GameBotCharacter char1 = new GameBotCharacter("Bot1", 100, 50);        
+        GameBotCharacter char1 = new GameBotCharacter("Bot1", 100, 50, new ArrayList<>( Arrays.asList("Sword", "Shield")));        
 
         GameBotCharacter char2 = char1.customizeClone();
         char2.setName("Bot2");
-        GameBotCharacter char3 = char2.customizeClone();
+        GameBotCharacter char3 = char1.customizeClone();
         char3.setName("Bot3");
-        GameBotCharacter char4 = char3.customizeClone();
+        GameBotCharacter char4 = char1.customizeClone();
         char4.setName("Bot4");
-        GameBotCharacter char5 = char4.customizeClone();
+        GameBotCharacter char5 = char1.customizeClone();
         char5.setName("Bot5");
+        List<String> weapons = char5.getWeapons();
+        weapons.add("Axe");
+        weapons.add("Bow");
 
         System.out.println(char1);
         System.out.println(char2);
