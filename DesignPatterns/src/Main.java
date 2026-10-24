@@ -27,7 +27,7 @@ public class Main {
 
         new EmailService().sendEmail();
         new UserMigrationService().migrateUser();
-        new LoginService().registerUser("Shivani", 25, "shivani@example.com");
+        new LoginService().registerUser("Shivani", 25, "shivani@example.com", "New Delhi");
 
 
 

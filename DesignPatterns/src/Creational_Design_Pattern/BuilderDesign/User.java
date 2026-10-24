@@ -5,11 +5,19 @@ public class User {
     private String name;
     private int age;
     private String email;
+    private String city;
 
     public User(String name, int age, String email) {
         this.name = name;
         this.age = age;
         this.email = email;
+    }
+
+    public User(String name, int age, String email, String city) {
+        this.name = name;
+        this.age = age;
+        this.email = email;
+        this.city = city;
     }
 
     @Override 
@@ -18,6 +26,7 @@ public class User {
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", email='" + email + '\'' +
+                ", city='" + city + '\'' +
                 '}';
     }
 
