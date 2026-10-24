@@ -33,16 +33,27 @@ public class Main {
         // Singleton pattern - It is design pattern which ensures that a class has only one instance
         // and provides a global point of access to it. 
 
-        Calculator c1 = Calculator.getInstance();
-        c1.a = 5;
-        c1.b = 10;
+        // Calculator c1 = Calculator.getInstance();
+        // c1.a = 5;
+        // c1.b = 10;
         
-        Calculator c2 = Calculator.getInstance();
-        c2.a = 20;
-        c2.b = 30;
+        // Calculator c2 = Calculator.getInstance();
+        // c2.a = 20;
+        // c2.b = 30;
         
-        System.out.println("Sum of c1: " + c1.sum());
-        System.out.println("Sum of c2: " + c2.sum());
+        // System.out.println("Sum of c1: " + c1.sum());
+        // System.out.println("Sum of c2: " + c2.sum());
+ 
+        Thread t1 = new Thread(() -> {
+             Calculator.getInstance();
+        });
+        
+        Thread t2 = new Thread(() -> {
+         Calculator.getInstance();
+        });
+
+        t1.start();
+        t2.start();
 
 
 

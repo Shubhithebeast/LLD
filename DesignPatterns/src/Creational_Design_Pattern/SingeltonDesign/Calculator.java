@@ -17,9 +17,12 @@ public class Calculator {
     }
 
     public static Calculator getInstance() {
-
         if (obj == null) {
-            obj = new Calculator();
+            synchronized (Calculator.class) {
+                if (obj == null) {
+                    obj = new Calculator();
+                }
+            }
         }
         return obj;
     }
