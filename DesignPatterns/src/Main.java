@@ -19,6 +19,7 @@ import Structural_Design_Pattern.ProxyDesign.DBProxy;
 import Structural_Design_Pattern.ProxyDesign.MSQLDB;
 import Structural_Design_Pattern.ProxyDesign.Movies;
 import Structural_Design_Pattern.ProxyDesign.MoviesProxy;
+import Structural_Design_Pattern.ProxyDesign.Database;
 import Structural_Design_Pattern.ProxyDesign.Video;
 import Creational_Design_Pattern.BuilderDesign.LoginService;
 
@@ -135,7 +136,7 @@ public class Main {
 
         // Protection proxy - A protection proxy is a type of proxy that controls access to an object based on permissions.
         // In this example, DBProxy acts as a protection proxy for the Database object.
-        Database dbProxy = new MSQLDB();
+        Database dbProxy = new DBProxy("admin");
         dbProxy.delete(); // Access denied: Only admin can delete users
 
 
