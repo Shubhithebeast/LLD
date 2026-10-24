@@ -27,9 +27,6 @@ public class UserBuilder {
         this.city = city;
         return this;
     }
-    
-    // public User build() {
-    //     return new User(name, age, email, city);
-    // }
+
 
 }
