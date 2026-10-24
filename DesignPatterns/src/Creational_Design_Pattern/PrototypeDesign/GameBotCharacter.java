@@ -1,5 +1,6 @@
 package Creational_Design_Pattern.PrototypeDesign;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class GameBotCharacter implements Clonable<GameBotCharacter>  {
@@ -31,7 +32,7 @@ public class GameBotCharacter implements Clonable<GameBotCharacter>  {
         this.name = prototype.name;
         this.health = prototype.health;
         this.power = prototype.power;
-        this.weapons = prototype.weapons;
+        this.weapons = new ArrayList<>(prototype.weapons);
     }
 
     public void setName(String name) {
