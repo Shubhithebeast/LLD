@@ -7,17 +7,17 @@ public class User {
     private String email;
     private String city;
 
-    public User(String name, int age, String email) {
-        this.name = name;
-        this.age = age;
-        this.email = email;
-    }
+    // public User(String name, int age, String email) {
+    //     this.name = name;
+    //     this.age = age;
+    //     this.email = email;
+    // }
 
-    public User(String name, int age, String email, String city) {
-        this.name = name;
-        this.age = age;
-        this.email = email;
-        this.city = city;
+    public User(UserBuilder builder) {
+        this.name = builder.name;
+        this.age = builder.age;
+        this.email = builder.email;
+        this.city = builder.city;
     }
 
     @Override 

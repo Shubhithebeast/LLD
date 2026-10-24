@@ -2,7 +2,12 @@ package Creational_Design_Pattern.BuilderDesign;
 
 public class UserMigrationService {
     public void migrateUser(){
-        User user = new User("Rahul", 24, "rahul@example.com", "New Delhi");
+        UserBuilder builder = new UserBuilder()
+                .setName("Shubham")
+                .setAge(24)
+                .setEmail("shubh.b@example.com")
+                .setCity("New York");
+        User user = new User(builder);
         System.out.println("User migrated successfully: " + user);
     }
 }
