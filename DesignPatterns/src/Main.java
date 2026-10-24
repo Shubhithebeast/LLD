@@ -2,6 +2,7 @@ import Creational_Design_Pattern.AbstarctPattern.DeliveryService;
 import Creational_Design_Pattern.AbstarctPattern.OrderService;
 import Creational_Design_Pattern.BuilderDesign.EmailService;
 import Creational_Design_Pattern.BuilderDesign.UserMigrationService;
+import Creational_Design_Pattern.PrototypeDesign.GameBotCharacter;
 import Creational_Design_Pattern.SingeltonDesign.Calculator;
 import Creational_Design_Pattern.BuilderDesign.LoginService;
 
@@ -33,13 +34,13 @@ public class Main {
         // Singleton pattern - It is design pattern which ensures that a class has only one instance
         // and provides a global point of access to it. 
 
-        // Calculator c1 = Calculator.getInstance();
-        // c1.a = 5;
-        // c1.b = 10;
+        Calculator c1 = Calculator.getInstance();
+        c1.a = 5;
+        c1.b = 10;
         
-        // Calculator c2 = Calculator.getInstance();
-        // c2.a = 20;
-        // c2.b = 30;
+        Calculator c2 = Calculator.getInstance();
+        c2.a = 20;
+        c2.b = 30;
         
         // System.out.println("Sum of c1: " + c1.sum());
         // System.out.println("Sum of c2: " + c2.sum());
@@ -52,9 +53,36 @@ public class Main {
          Calculator.getInstance();
         });
 
-        t1.start();
-        t2.start();
+        // t1.start();
+        // t2.start();
 
+        
+
+        // Prototype pattern - It is design pattern which is used to create a new object by copying an existing object,
+        // known as the prototype. This pattern is used when the cost of creating a new object is expensive or complex.
+
+        long startTime = System.currentTimeMillis();
+
+        GameBotCharacter char1 = new GameBotCharacter("Bot1", 100, 50);        
+
+        GameBotCharacter char2 = char1.customizeClone();
+        char2.setName("Bot2");
+        GameBotCharacter char3 = char2.customizeClone();
+        char3.setName("Bot3");
+        GameBotCharacter char4 = char3.customizeClone();
+        char4.setName("Bot4");
+        GameBotCharacter char5 = char4.customizeClone();
+        char5.setName("Bot5");
+
+        System.out.println(char1);
+        System.out.println(char2);
+        System.out.println(char3);
+        System.out.println(char4);
+        System.out.println(char5);
+
+        long endTime = System.currentTimeMillis();
+
+        System.out.println("Time taken to create characters: " + (endTime - startTime) + "ms");
 
 
 
