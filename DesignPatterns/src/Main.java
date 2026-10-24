@@ -2,6 +2,7 @@ import Creational_Design_Pattern.AbstarctPattern.DeliveryService;
 import Creational_Design_Pattern.AbstarctPattern.OrderService;
 import Creational_Design_Pattern.BuilderDesign.EmailService;
 import Creational_Design_Pattern.BuilderDesign.UserMigrationService;
+import Creational_Design_Pattern.SingeltonDesign.Calculator;
 import Creational_Design_Pattern.BuilderDesign.LoginService;
 
 public class Main {
@@ -25,9 +26,23 @@ public class Main {
         // Builder pattern - It is design pattern which is used to construct a complex object easily,
         //  by keeping  the object creation process flexible, readable and maintainable.
 
-        new EmailService().sendEmail();
-        new UserMigrationService().migrateUser();
-        new LoginService().registerUser("Shivani", 25, "shivani@example.com", "New Delhi");
+        // new EmailService().sendEmail();
+        // new UserMigrationService().migrateUser();
+        // new LoginService().registerUser("Shivani", 25, "shivani@example.com", "New Delhi");
+
+        // Singleton pattern - It is design pattern which ensures that a class has only one instance
+        // and provides a global point of access to it. 
+
+        Calculator c1 = new Calculator();
+        c1.a = 5;
+        c1.b = 10;
+        Calculator c2 = new Calculator();
+        c2.a = 20;
+        c2.b = 30;
+
+        System.out.println("Sum of c1: " + c1.sum());
+        System.out.println("Sum of c2: " + c2.sum());
+
 
 
 
