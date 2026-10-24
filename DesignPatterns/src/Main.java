@@ -15,6 +15,8 @@ import Structural_Design_Pattern.AdapterDesign.PaypalAdapter;
 import Structural_Design_Pattern.AdapterDesign.PaypalGateway;
 import Structural_Design_Pattern.AdapterDesign.RazorpayAdapter;
 import Structural_Design_Pattern.AdapterDesign.RazorpayGateway;
+import Structural_Design_Pattern.ProxyDesign.Movies;
+import Structural_Design_Pattern.ProxyDesign.Video;
 import Creational_Design_Pattern.BuilderDesign.LoginService;
 
 public class Main {
@@ -109,8 +111,20 @@ public class Main {
 
         // Adapter pattern - It is a structural design pattern that allows two incompatible system or interfaces to work together.
 
-        new PaymentClient(new RazorpayAdapter(new RazorpayGateway())).makePayment();
+        // new PaymentClient(new RazorpayAdapter(new RazorpayGateway())).makePayment();
 
+
+        // Proxy pattern - It is a structural design pattern that provides a surrogate or
+        //  placeholder for another object to control access to it.
+
+        Video video1 = new Movies("SampleVideo1.mp4"); 
+        Video video2 = new Movies("SampleVideo2.mp4");
+        Video video3 = new Movies("SampleVideo3.mp4");
+        Video video4 = new Movies("SampleVideo4.mp4");
+        // video1.play();    
+        // video2.play();    
+        // video3.play();
+        // video4.play();
 
 
 
