@@ -15,6 +15,8 @@ import Structural_Design_Pattern.AdapterDesign.PaypalAdapter;
 import Structural_Design_Pattern.AdapterDesign.PaypalGateway;
 import Structural_Design_Pattern.AdapterDesign.RazorpayAdapter;
 import Structural_Design_Pattern.AdapterDesign.RazorpayGateway;
+import Structural_Design_Pattern.ProxyDesign.DBProxy;
+import Structural_Design_Pattern.ProxyDesign.MSQLDB;
 import Structural_Design_Pattern.ProxyDesign.Movies;
 import Structural_Design_Pattern.ProxyDesign.MoviesProxy;
 import Structural_Design_Pattern.ProxyDesign.Video;
@@ -118,14 +120,23 @@ public class Main {
         // Proxy pattern - It is a structural design pattern that provides a surrogate or
         //  placeholder for another object to control access to it.
 
-        Video video1 = new MoviesProxy("SampleVideo1.mp4"); 
-        Video video2 = new MoviesProxy("SampleVideo2.mp4");
-        Video video3 = new MoviesProxy("SampleVideo3.mp4");
-        Video video4 = new MoviesProxy("SampleVideo4.mp4");
-        video1.play();    
-        video2.play();    
-        video3.play();
-        video4.play();
+        // Virtual proxy - A virtual proxy is a type of proxy that controls access to an object that is expensive to create.
+        // It delays the creation of the actual object until it is needed. In this example, MoviesProxy acts as a virtual proxy for Video objects.
+
+        // Video video1 = new MoviesProxy("SampleVideo1.mp4"); 
+        // Video video2 = new MoviesProxy("SampleVideo2.mp4");
+        // Video video3 = new MoviesProxy("SampleVideo3.mp4");
+        // Video video4 = new MoviesProxy("SampleVideo4.mp4");
+        // video1.play();    
+        // video2.play();    
+        // video3.play();
+        // video4.play();
+
+
+        // Protection proxy - A protection proxy is a type of proxy that controls access to an object based on permissions.
+        // In this example, DBProxy acts as a protection proxy for the Database object.
+        Database dbProxy = new MSQLDB();
+        dbProxy.delete(); // Access denied: Only admin can delete users
 
 
 
