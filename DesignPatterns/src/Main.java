@@ -137,7 +137,13 @@ public class Main {
         // Protection proxy - A protection proxy is a type of proxy that controls access to an object based on permissions.
         // In this example, DBProxy acts as a protection proxy for the Database object.
         Database dbProxy = new DBProxy("admin");
-        dbProxy.delete(); // Access denied: Only admin can delete users
+        // dbProxy.delete(); // Access denied: Only admin can delete users
+
+
+        // Remote proxy - A remote proxy is a type of proxy that controls access to an object that is located in a different address space.
+        // It acts as a local representative for the remote object, handling communication and network details.
+
+        
 
 
 
