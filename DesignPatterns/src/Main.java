@@ -1,10 +1,7 @@
-import java.util.List;
+import java.util.*;
 
 import Creational_Design_Pattern.AbstarctPattern.DeliveryService;
-import java.util.Arrays;
-import java.util.ArrayList;
 
-import Creational_Design_Pattern.AbstarctPattern.DeliveryService;
 import Creational_Design_Pattern.AbstarctPattern.OrderService;
 import Creational_Design_Pattern.BuilderDesign.EmailService;
 import Creational_Design_Pattern.BuilderDesign.UserMigrationService;
@@ -28,6 +25,9 @@ public class Main {
 
 
         // ---------------- Creational Design Patterns ----------------
+
+        // Creational Patterns are design patterns that deal with object creation mechanisms, 
+        // trying to create objects in a manner suitable to the situation.
 
         // Factory pattern - It is design pattern which is used to create objects without exposing the creation logic
         // to the client and refer to newly created object using a common interface.
@@ -113,6 +113,9 @@ public class Main {
 
         // ---------------- Structural Design Patterns ----------------
 
+        // Structural Patterns are design patterns that deal with object composition, 
+        // trying to create relationships between objects to form larger structures.
+
         // Adapter pattern - It is a structural design pattern that allows two incompatible system or interfaces to work together.
 
         // new PaymentClient(new RazorpayAdapter(new RazorpayGateway())).makePayment();
@@ -144,7 +147,8 @@ public class Main {
         // It acts as a local representative for the remote object, handling communication and network details.
 
         
-
+       // Decorator pattern - It is a structural design pattern that allows behavior to be added to an individual object, 
+        // dynamically, without affecting the behavior of other objects from the same class.
 
 
     }
