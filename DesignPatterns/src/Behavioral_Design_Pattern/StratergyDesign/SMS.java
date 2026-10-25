@@ -1,19 +1,15 @@
 package Behavioral_Design_Pattern.StratergyDesign;
 
-public class SMS implements Notification {
+public class SMS extends Notification {
+
+    public SMS(EncryptionStratergy encryptionStratergy, CompressionStratergy compressionStratergy) {
+        super(encryptionStratergy, compressionStratergy);
+    }
 
      @Override
     public void send() {
         System.out.println("Sending SMS Notification");
     }
 
-    @Override
-    public void encrypt() {
-        System.out.println("AES Encrypting SMS Notification");
-    }
-    @Override
-    public void compress() {
-        System.out.println("GZIP Compressing SMS Notification");
-    }
 
 }
